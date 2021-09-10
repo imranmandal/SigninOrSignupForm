@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rounded-border {
+  @apply border-2 border-solid w-full py-2 px-3 rounded-lg;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  @apply my-6 mx-20 w-2/4 lg:w-2/4 lg:z-10 lg:mt-3 lg:mx-auto lg:bg-white lg:p-10 lg:rounded-md md:w-screen md:m-0 md:rounded-none md:h-screen md:overflow-auto sm:px-5 sm:pb-1;
+}
+
+.heroImage {
+  @apply overflow-visible h-auto w-3/4 lg:fixed lg:h-screen lg:w-screen lg:z-0 md:hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.divider {
+  margin: "auto";
+  text-align: center;
+}
+
+.divider::before {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 2px;
+  background: #ddd;
+  left: 0;
+  top: 60%;
+  position: absolute;
+}
+.divider::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 2px;
+  background: #ddd;
+  right: 0;
+  top: 60%;
+  position: absolute;
 }
